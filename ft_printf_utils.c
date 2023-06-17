@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/16 17:42:16 by evportel          #+#    #+#             */
+/*   Updated: 2023/06/17 16:23:25 by evportel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -20,4 +33,16 @@ char	*ft_strchr(const char *s, int c)
 		index++;
 	}
 	return (NULL);
+}
+
+size_t	ft_strlen(const char *s)
+{
+	unsigned long int	length;
+
+	length = 0;
+	while (s[length])
+	{
+		length++;
+	}
+	return (length);
 }
