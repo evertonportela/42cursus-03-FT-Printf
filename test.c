@@ -4,14 +4,14 @@
 int main()
 {
 	int	count;
-	// ft_printf("Modificador c");
+	ft_printf("Modificador c");
 	// One arg
 	char	letra_1 = 'h';
-	// ft_printf("\nImprimir %c", letra_1);
+	ft_printf("\nImprimir %c", letra_1);
 	
 	// Two arg
 	char	letra_2 = 'y';
-	// count = ft_printf("\nImprimir %c %c", letra_1, letra_2);
+	count = ft_printf("\nImprimir %c %c", letra_1, letra_2);
 
 	// Three arg
 	char	letra_3 = 'e';
