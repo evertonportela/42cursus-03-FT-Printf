@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:42:16 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/17 21:03:55 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/18 19:04:05 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,17 @@ void	ft_putchar(char c)
 	addOneMore(1);
 }
 
-void	ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
 	int	n;
 
 	n = 0;
+	if (!str)
+		return (ft_putstr("(null)"));
 	while (str[n] != '\0')
 	{
 		ft_putchar(str[n]);
 		n++;
 	}
-}	
+	return (1);
+}

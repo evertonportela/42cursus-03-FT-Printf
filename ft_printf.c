@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:47:08 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/17 21:04:15 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/18 17:20:52 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,9 @@ static void	show_of_parameter(char charactere, va_list arg)
 */
 {
 	if (charactere == 'c')
-	{
 		ft_putchar(va_arg(arg, int));
-	}
 	else if (charactere == 's')
 		ft_putstr(va_arg(arg, char *));
-		
 }
 
 int	ft_printf(const char *format, ...)

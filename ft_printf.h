@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:58:45 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/17 21:04:45 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:48:28 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 int		ft_printf(const char *format, ...);
 int		addOneMore(int flag);
 void	ft_putchar(char c);
-void	ft_putstr(char *str);
+int		ft_putstr(char *str);
 
 #endif
