@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:42:16 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/19 17:38:49 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/19 20:04:57 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,34 @@ int	ft_putstr(char *str)
 
 int ft_putptr(unsigned long nbr, int flag)
 {
-	if (flag == 0 && nbr != 0)
-	{
-		ft_putstr("0x");
-		return (0);
-	}
+	
 	if (nbr == 0)
 	{
 		ft_putstr("(nil)");
 		return (0);
 	}
-	else if (nbr > 15)
-	{
+	if (flag == 0)
+		ft_putstr("0x");
+	if (nbr > 15)
 		ft_putptr(nbr / 16, 1);
-	}
 	write(1, &"0123456789abcdef"[nbr % 16], sizeof(char));
 	addOneMore(1);
+	return (1);
+}
+
+int	ft_putnbr(int nb)
+{
+	unsigned int	number;
+
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		number = nb * -1;
+	}
+	else
+		number = nb;
+	if (number >= 10)
+		ft_putnbr(number / 10);
+	ft_putchar(number % 10 + '0');
 	return (1);
 }

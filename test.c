@@ -10,7 +10,7 @@ int main()
 	char content[] = "texto";
 	char *p;
 	p = content;
-	count = ft_printf("%p", NULL);
+	count = ft_printf("%p", p);
 	printf("\n%d", count);
 	// return 0;
 
@@ -18,7 +18,23 @@ int main()
 	// char *p;
 	// p = content;
 	printf("\n");
-	count = printf("%p", NULL);
+	count = printf("%p", p);
 	printf("\n%d", count);
 	return 0;
 }
+
+
+	// int	count;
+
+	// int nbr = 42;
+	// count = ft_printf("%d", nbr);
+	// printf("\n%d", count);
+	// // return 0;
+
+	// // char content[] = "texto";
+	// // char *p;
+	// // p = content;
+	// printf("\n");
+	// count = printf("%d", nbr);
+	// printf("\n%d", count);
+	// return 0;
