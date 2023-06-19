@@ -7,13 +7,18 @@ int main()
 {
 	int	count;
 
-	char *p = NULL;
-	count = ft_printf(" NULL %s NULL ", p);
+	char content[] = "texto";
+	char *p;
+	p = content;
+	count = ft_printf("%p", NULL);
+	printf("\n%d", count);
+	// return 0;
+
+	// char content[] = "texto";
+	// char *p;
+	// p = content;
+	printf("\n");
+	count = printf("%p", NULL);
 	printf("\n%d", count);
 	return 0;
-
-// 	char *p = NULL;
-// 	count = printf(" NULL %s NULL ", p);
-// 	printf("\n%d", count);
-// 	return 0;
 }
