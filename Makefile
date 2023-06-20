@@ -6,7 +6,7 @@
 #    By: evportel <evportel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/14 10:46:35 by evportel          #+#    #+#              #
-#    Updated: 2023/06/17 16:57:13 by evportel         ###   ########.fr        #
+#    Updated: 2023/06/20 12:26:45 by evportel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC			= cc
 FLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
 
-SOURCES		= ft_printf.c	ft_printf_utils.c
+SOURCES		= ft_printf.c	ft_printf_utils_1.c	ft_printf_utils_2.c
 OBJECTS		= $(SOURCES:%.c=%.o)
 
 all:		$(NAME)	
@@ -37,5 +37,5 @@ re:			fclean	all
 
 test:
 	clear
-	$(CC) $(FLAGS) -I ./ ft_printf.c ft_printf_utils.c test.c
+	$(CC) $(FLAGS) -I ./ ft_printf.c ft_printf_utils_1.c ft_printf_utils_2.c test.c
 	./a.out

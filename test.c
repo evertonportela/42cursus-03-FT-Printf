@@ -2,39 +2,24 @@
 #include "ft_printf.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
+
+
+// #define LONG_MAX	9223372036854775807L
+// 9223372036854775807		-9223372036854775808
+// #define LONG_MIN	-9223372036854775808
 
 int main()
 {
 	int	count;
 
-	char content[] = "texto";
-	char *p;
-	p = content;
-	count = ft_printf("%p", p);
+	// count = ft_printf("%u", LONG_MAX);
+	count = ft_printf("%u", -42);
 	printf("\n%d", count);
-	// return 0;
 
-	// char content[] = "texto";
-	// char *p;
-	// p = content;
 	printf("\n");
-	count = printf("%p", p);
+	// count = printf("%lu", LONG_MAX);
+	count = printf("%d", -42);
 	printf("\n%d", count);
 	return 0;
 }
-
-
-	// int	count;
-
-	// int nbr = 42;
-	// count = ft_printf("%d", nbr);
-	// printf("\n%d", count);
-	// // return 0;
-
-	// // char content[] = "texto";
-	// // char *p;
-	// // p = content;
-	// printf("\n");
-	// count = printf("%d", nbr);
-	// printf("\n%d", count);
-	// return 0;
