@@ -14,12 +14,12 @@ int main()
 	int	count;
 
 	// count = ft_printf("%u", LONG_MAX);
-	count = ft_printf("%u", -42);
+	count = ft_printf("%x", -42);
 	printf("\n%d", count);
 
 	printf("\n");
 	// count = printf("%lu", LONG_MAX);
-	count = printf("%d", -42);
+	count = printf("%x", -42);
 	printf("\n%d", count);
 	return 0;
 }

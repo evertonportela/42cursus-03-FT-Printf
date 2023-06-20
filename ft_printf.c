@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:47:08 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/20 17:41:02 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/20 19:19:27 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ static void	show_of_parameter(char charactere, va_list arg)
 		ft_putnbr(va_arg(arg, int));
 	else if (charactere == 'u')
 		ft_putnbr_unsigned(va_arg(arg, unsigned int));
+	else if (charactere == 'x')
+		ft_put_hex_lower(va_arg(arg, unsigned int));
 }
 
 int	ft_printf(const char *format, ...)
@@ -76,3 +78,4 @@ int	ft_printf(const char *format, ...)
 }
 
 // Sua função deve lidar com as seguintes conversões: c s p d i u x X %
+
