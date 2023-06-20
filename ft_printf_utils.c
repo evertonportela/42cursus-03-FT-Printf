@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:42:16 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/19 20:04:57 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/20 12:03:38 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,20 @@ int	ft_putnbr(int nb)
 		ft_putchar('-');
 		number = nb * -1;
 	}
+	else
+		number = nb;
+	if (number >= 10)
+		ft_putnbr(number / 10);
+	ft_putchar(number % 10 + '0');
+	return (1);
+}
+
+int	ft_putnbr_unsigned(long int nb)
+{
+	unsigned long int	number;
+
+	if (nb < 0)
+		number = nb * -1;
 	else
 		number = nb;
 	if (number >= 10)
