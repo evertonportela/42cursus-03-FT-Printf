@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:47:08 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/21 15:20:08 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:28:32 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ static void	show_of_parameter(char charactere, va_list arg)
 		ft_put_hex_lower(va_arg(arg, unsigned int));
 	else if (charactere == 'X')
 		ft_put_hex_upper(va_arg(arg, unsigned int));
+	else if (charactere == '%')
+		ft_putchar('%');
 }
 
 int	ft_printf(const char *format, ...)
