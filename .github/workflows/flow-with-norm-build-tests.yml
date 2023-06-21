@@ -60,6 +60,4 @@ jobs:
           git clone https://github.com/Tripouille/printfTester.git
           cd printfTester
           export TERM=xterm-256color
-
-      - name: make mandatory
-        run: make m
+          make m
