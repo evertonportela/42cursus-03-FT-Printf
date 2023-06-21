@@ -7,6 +7,7 @@ on:
 
 jobs:
   norminette:
+    name: norminette
     runs-on: ubuntu-20.04
     defaults:
       run:
@@ -39,3 +40,18 @@ jobs:
       
       - name: make
         run: make
+  test:
+    name: test
+    needs: build
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: test_tripouille
+        run: /
+          git clone https://github.com/Tripouille/printfTester.git
+          cd printfTester
+          make m
