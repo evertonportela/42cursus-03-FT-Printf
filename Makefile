@@ -6,7 +6,7 @@
 #    By: evportel <evportel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/14 10:46:35 by evportel          #+#    #+#              #
-#    Updated: 2023/06/20 12:26:45 by evportel         ###   ########.fr        #
+#    Updated: 2023/06/21 17:54:45 by evportel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,3 @@ fclean:		clean
 re:			fclean	all
 
 .PHONY: re fclean clean all
-
-test:
-	clear
-	$(CC) $(FLAGS) -I ./ ft_printf.c ft_printf_utils_1.c ft_printf_utils_2.c test.c
-	./a.out
