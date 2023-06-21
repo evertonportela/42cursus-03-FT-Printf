@@ -50,8 +50,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: test_tripouille
-        run: /
+      - name: cloning test tripouille
+        run: |
           git clone https://github.com/Tripouille/printfTester.git
           cd printfTester
           make m
