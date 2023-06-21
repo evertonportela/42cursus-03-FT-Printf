@@ -27,15 +27,14 @@ jobs:
       
       - name: Test with norminette
         run: norminette
-  test:
-    name: test
+  build:
+    name: build
     needs: norminette
     runs-on: ubuntu-20.04
     defaults:
       run:
         working-directory: .
     steps:
-      - name: Checkout
       - uses: actions/checkout@v2
       
       - name: make
