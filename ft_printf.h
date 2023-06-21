@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:58:45 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/21 14:01:57 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:16:47 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@
 # include <stdio.h>
 
 int		ft_printf(const char *format, ...);
-int		addOneMore(int flag);
+int		add_one_more(int flag);
 void	ft_putchar(char c);
 int		ft_putstr(char *str);
 int		ft_putptr(unsigned long nbr, int flag);
 void	ft_putnbr(int nb);
 void	ft_putnbr_unsigned(unsigned int nb);
 void	ft_put_hex_lower(unsigned int nb);
+void	ft_put_hex_upper(unsigned int nbr);
 
 #endif

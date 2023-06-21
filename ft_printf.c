@@ -6,13 +6,13 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:47:08 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/20 19:19:27 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:20:08 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	addOneMore(int flag)
+int	add_one_more(int flag)
 /**
  * Essa função é dedicada a incrementar um contador estático que passeia 
  * por toda execução da função, somando 1, a cada impressão no display.
@@ -23,7 +23,7 @@ int	addOneMore(int flag)
 {
 	static int	sum;
 
-	if(flag == 1)
+	if (flag == 1)
 		sum++;
 	else if (flag == 0)
 		sum = 0;
@@ -49,6 +49,8 @@ static void	show_of_parameter(char charactere, va_list arg)
 		ft_putnbr_unsigned(va_arg(arg, unsigned int));
 	else if (charactere == 'x')
 		ft_put_hex_lower(va_arg(arg, unsigned int));
+	else if (charactere == 'X')
+		ft_put_hex_upper(va_arg(arg, unsigned int));
 }
 
 int	ft_printf(const char *format, ...)
@@ -57,13 +59,13 @@ int	ft_printf(const char *format, ...)
 	va_list	ptr_args;
 
 	va_start(ptr_args, format);
-	count = addOneMore(0);
+	count = add_one_more(0);
 	while (*format)
 	{
 		if (*format != '%')
 		{
 			write(1, &format[0], sizeof(char));
-			addOneMore(1);
+			add_one_more(1);
 			format++;
 		}
 		else
@@ -72,10 +74,7 @@ int	ft_printf(const char *format, ...)
 			format = format + 2;
 		}
 	}
-	count = addOneMore(1) - 1;
+	count = add_one_more(1) - 1;
 	va_end(ptr_args);
 	return (count);
 }
-
-// Sua função deve lidar com as seguintes conversões: c s p d i u x X %
-

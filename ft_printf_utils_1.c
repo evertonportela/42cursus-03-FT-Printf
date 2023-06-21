@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:42:16 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/20 19:11:29 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/21 15:20:41 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	addOneMore(1);
+	add_one_more(1);
 }
 
 int	ft_putstr(char *str)
@@ -33,9 +33,8 @@ int	ft_putstr(char *str)
 	return (1);
 }
 
-int ft_putptr(unsigned long nbr, int flag)
+int	ft_putptr(unsigned long nbr, int flag)
 {
-	
 	if (nbr == 0)
 	{
 		ft_putstr("(nil)");
@@ -46,7 +45,7 @@ int ft_putptr(unsigned long nbr, int flag)
 	if (nbr > 15)
 		ft_putptr(nbr / 16, 1);
 	write(1, &"0123456789abcdef"[nbr % 16], sizeof(char));
-	addOneMore(1);
+	add_one_more(1);
 	return (1);
 }
 
