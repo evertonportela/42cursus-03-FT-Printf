@@ -52,6 +52,7 @@ jobs:
 
       - name: cloning test tripouille
         run: |
+          pwd
           git clone https://github.com/Tripouille/printfTester.git
           cd printfTester
           make m
