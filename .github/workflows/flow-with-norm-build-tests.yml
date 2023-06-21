@@ -56,7 +56,7 @@ jobs:
           cd printfTester
           export TERM=xterm-256color
 
-      -name: install Valgrind
+      - name: install Valgrind
         run: |
           sudo apt-get update
           sudo apt-get install valgrind -y
