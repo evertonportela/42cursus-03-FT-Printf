@@ -79,6 +79,6 @@ jobs:
       - name: cloning test Paulo Santana
         run: |
           git clone https://github.com/paulo-santana/ft_printf_tester.git
-          cd printfTester
+          cd ft_printf_tester
           export TERM=xterm-256color
           make m
