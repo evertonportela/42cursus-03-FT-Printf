@@ -40,8 +40,8 @@ jobs:
       
       - name: make
         run: make
-  test:
-    name: test
+  test01:
+    name: test tripouille
     needs: build
     runs-on: ubuntu-20.04
     defaults:
@@ -58,6 +58,27 @@ jobs:
       - name: cloning test tripouille
         run: |
           git clone https://github.com/Tripouille/printfTester.git
+          cd printfTester
+          export TERM=xterm-256color
+          make m
+  test02:
+    name: test paulo santana
+    needs: build
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install Valgrind
+        run: |
+          sudo apt-get update
+          sudo apt-get install valgrind -y
+
+      - name: cloning test Paulo Santana
+        run: |
+          git clone https://github.com/paulo-santana/ft_printf_tester.git
           cd printfTester
           export TERM=xterm-256color
           make m
