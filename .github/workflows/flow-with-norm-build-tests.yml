@@ -55,7 +55,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install valgrind -y
 
-      - name: cloning test tripouille
+      - name: Cloning Tester Tripouille - Mandatory
         run: |
           git clone https://github.com/Tripouille/printfTester.git
           cd printfTester
@@ -76,9 +76,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install valgrind -y
 
-      - name: cloning test Paulo Santana
+      - name: Cloning Tester Paulo Santana - Mandatory
         run: |
           git clone https://github.com/paulo-santana/ft_printf_tester.git
           cd ft_printf_tester
           export TERM=xterm-256color
-          make m
+          sh test m
