@@ -63,14 +63,6 @@ Compilation command:
 make
 ```
 
-Expected Output:
-``` shell
-$> ./hello_libft
-Hello world!
-Powered by Libft.
-$>
-```
-
 ### Testes
 <p>I used some community tests 42:<p/>
 <p>From Paulo Santana's repository - https://github.com/paulo-santana/ft_printf_tester.<br/> And from the Tripouille repository - https://github.com/Tripouille/printfTester</p>
