@@ -6,19 +6,19 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:47:08 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/21 15:28:32 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/23 10:25:10 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 int	add_one_more(int flag)
-/**
- * Essa função é dedicada a incrementar um contador estático que passeia 
- * por toda execução da função, somando 1, a cada impressão no display.
- * A flag serve para resetar a variável estática, informando 0, 
- * nos casos em que a função ft_printf é chamada várias vezes. 
- * Flag 1, apenas continua somando mais um a cada caractere impresso.
+/** This function is dedicated to incrementing a static counter 
+ * that runs through the entire execution of the function, 
+ * adding 1 to each impression on the display. 
+ * The flag serves to reset the static variable, 
+ * informing 0, in cases where the ft_printf function is called several times.
+ * Flag 1, just keep adding one more to each character printed.
 */
 {
 	static int	sum;
@@ -31,10 +31,9 @@ int	add_one_more(int flag)
 }
 
 static void	show_of_parameter(char charactere, va_list arg)
-/**
- * Função trabalha identificando o caractere especificador de formatação 
- * e direcionando para a impressão correta do parâmetro passado 
- * pela variável va_list
+/** Function works by identifying the formatting specifier character
+ * and directing to the correct printing
+ * of the parameter passed by the va_list variable
 */
 {
 	if (charactere == 'c')
@@ -56,6 +55,11 @@ static void	show_of_parameter(char charactere, va_list arg)
 }
 
 int	ft_printf(const char *format, ...)
+/** This is the main function of the file. 
+ * The loop looks for the special character '%', 
+ * while it doesn't find it, it prints normally. 
+ * When it finds it, it sends the specifier character reference 
+ * to the function that handles the formatting.*/
 {
 	int		count;
 	va_list	ptr_args;
