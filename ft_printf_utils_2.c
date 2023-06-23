@@ -6,13 +6,15 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:42:16 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/21 15:20:57 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/23 10:52:25 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 void	ft_put_hex_lower(unsigned int nbr)
+/** Prints the conversion of an integer (unsigned) parameter 
+ * to an unsigned hexadecimal, formatting as lower case. */
 {
 	if (nbr > 15)
 		ft_put_hex_lower(nbr / 16);
@@ -21,6 +23,8 @@ void	ft_put_hex_lower(unsigned int nbr)
 }
 
 void	ft_put_hex_upper(unsigned int nbr)
+/** Prints the conversion of an integer (unsigned) parameter
+ * to an unsigned hexadecimal, formatting as uppercase. */
 {
 	if (nbr > 15)
 		ft_put_hex_upper(nbr / 16);
