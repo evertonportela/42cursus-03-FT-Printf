@@ -6,19 +6,24 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 17:42:16 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/21 15:20:41 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/23 10:43:19 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 void	ft_putchar(char c)
+/** Prints a single character, within the standard ascii table,
+ * and adds 1 to the static variable. */
 {
 	write(1, &c, 1);
 	add_one_more(1);
 }
 
 int	ft_putstr(char *str)
+/** Prints a valid string, 
+ * reusing the ft_putchar function to print each character. 
+ * When null, expressly prints the word 'null'.*/
 {
 	int	n;
 
@@ -34,6 +39,11 @@ int	ft_putstr(char *str)
 }
 
 int	ft_putptr(unsigned long nbr, int flag)
+/** Prints in hexadecimal format,
+ * the memory address of the referenced pointer,
+ * prefixed with the characters '0x'.
+ * Converting an 'unsigned long' parameter to hexadecimal.
+ * When null, expressly write the word 'nil'.*/
 {
 	if (nbr == 0)
 	{
@@ -50,6 +60,8 @@ int	ft_putptr(unsigned long nbr, int flag)
 }
 
 void	ft_putnbr(int nb)
+/** Prints an integer parameter, 
+ * including its sign, if it is a negative decimal.*/
 {
 	unsigned int	number;
 
@@ -66,6 +78,7 @@ void	ft_putnbr(int nb)
 }
 
 void	ft_putnbr_unsigned(unsigned int nb)
+/** Prints an integer parameter, converting it to an unsigned decimal. */
 {
 	if (nb >= 10)
 		ft_putnbr(nb / 10);

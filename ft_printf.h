@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:58:45 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/21 15:16:47 by evportel         ###   ########.fr       */
+/*   Updated: 2023/06/22 17:36:49 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-
-# include <stdio.h>
 
 int		ft_printf(const char *format, ...);
 int		add_one_more(int flag);
