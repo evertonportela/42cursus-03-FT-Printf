@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 11:47:08 by evportel          #+#    #+#             */
-/*   Updated: 2023/06/23 10:25:10 by evportel         ###   ########.fr       */
+/*   Updated: 2023/07/10 10:24:44 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ int	ft_printf(const char *format, ...)
 
 	va_start(ptr_args, format);
 	count = add_one_more(0);
+	if (!format)
+		return (-1);
 	while (*format)
 	{
 		if (*format != '%')

@@ -70,4 +70,4 @@ make
 	You can view these tests on the Actions tab, where I created a Workflow to verify the code in accordance with the 42 standard, the generation of the library with the printf code and the two tests mentioned above.
 <p/>
 
-- [`Access Github Actions here`](https://github.com/evertonportela/42cursus-03-FT-Printf/actions)
+[![flow-with-norm-build-tests](https://github.com/evertonportela/42cursus-03-FT-Printf/actions/workflows/flow-with-norm-build-tests.yml/badge.svg)](https://github.com/evertonportela/42cursus-03-FT-Printf/actions/workflows/flow-with-norm-build-tests.yml)
